@@ -4,6 +4,7 @@ namespace Crater\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 use Crater\User;
+use Log;
 
 class ProfileRequest extends FormRequest
 {
@@ -25,7 +26,9 @@ class ProfileRequest extends FormRequest
     public function rules()
     {
         $user = User::find(1);
-
+        if(!$user){
+           Log::error("User not found!!! "); 
+        }
         switch ($this->getMethod()) {
             case 'POST':
                 return [

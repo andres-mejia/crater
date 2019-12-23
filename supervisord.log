@@ -1,0 +1,29 @@
+2019-12-23 09:08:50,978 CRIT Supervisor running as root (no user in config file)
+2019-12-23 09:08:50,978 WARN Included extra file "/etc/supervisord.d/websockets.conf" during parsing
+2019-12-23 09:08:50,988 INFO RPC interface 'supervisor' initialized
+2019-12-23 09:08:50,989 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2019-12-23 09:08:50,989 INFO supervisord started with pid 1
+2019-12-23 09:08:51,991 INFO spawned: 'laravel-websockets_00' with pid 8
+2019-12-23 09:08:52,531 INFO exited: laravel-websockets_00 (exit status 255; not expected)
+2019-12-23 09:08:53,534 INFO spawned: 'laravel-websockets_00' with pid 9
+2019-12-23 09:08:53,567 INFO exited: laravel-websockets_00 (exit status 255; not expected)
+2019-12-23 09:08:55,570 INFO spawned: 'laravel-websockets_00' with pid 10
+2019-12-23 09:08:55,603 INFO exited: laravel-websockets_00 (exit status 255; not expected)
+2019-12-23 09:08:58,608 INFO spawned: 'laravel-websockets_00' with pid 11
+2019-12-23 09:08:58,642 INFO exited: laravel-websockets_00 (exit status 255; not expected)
+2019-12-23 09:08:59,643 INFO gave up: laravel-websockets_00 entered FATAL state, too many start retries too quickly
+2019-12-23 09:23:21,746 WARN received SIGTERM indicating exit request
+2019-12-23 09:23:59,004 CRIT Supervisor running as root (no user in config file)
+2019-12-23 09:23:59,004 WARN Included extra file "/etc/supervisord.d/websockets.conf" during parsing
+2019-12-23 09:23:59,053 INFO RPC interface 'supervisor' initialized
+2019-12-23 09:23:59,053 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2019-12-23 09:23:59,053 INFO supervisord started with pid 1
+2019-12-23 09:24:00,055 INFO spawned: 'laravel-websockets_00' with pid 8
+2019-12-23 09:24:00,095 INFO exited: laravel-websockets_00 (exit status 255; not expected)
+2019-12-23 09:24:01,098 INFO spawned: 'laravel-websockets_00' with pid 9
+2019-12-23 09:24:01,132 INFO exited: laravel-websockets_00 (exit status 255; not expected)
+2019-12-23 09:24:03,135 INFO spawned: 'laravel-websockets_00' with pid 10
+2019-12-23 09:24:03,166 INFO exited: laravel-websockets_00 (exit status 255; not expected)
+2019-12-23 09:24:06,171 INFO spawned: 'laravel-websockets_00' with pid 11
+2019-12-23 09:24:06,201 INFO exited: laravel-websockets_00 (exit status 255; not expected)
+2019-12-23 09:24:07,202 INFO gave up: laravel-websockets_00 entered FATAL state, too many start retries too quickly
