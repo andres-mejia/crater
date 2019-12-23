@@ -67,18 +67,18 @@ export default {
     return {
       range: new Date(),
       dateRange: [
-        'Today',
-        'This Week',
-        'This Month',
-        'This Quarter',
-        'This Year',
-        'Previous Week',
-        'Previous Month',
-        'Previous Quarter',
-        'Previous Year',
-        'Custom'
+        'Hoy',
+        'Esta semana',
+        'Este mes',
+        'Este trimestre',
+        'Este año',
+        'Semana anterior',
+        'Mes anterior',
+        'Trimestre anterior',
+        'Año anterior',
+        'Personalizado'
       ],
-      selectedRange: 'This Month',
+      selectedRange: 'Este mes',
       formData: {
         from_date: moment().startOf('month').toString(),
         to_date: moment().endOf('month').toString()
@@ -127,47 +127,47 @@ export default {
     },
     onChangeDateRange () {
       switch (this.selectedRange) {
-        case 'Today':
+        case 'Hoy':
           this.formData.from_date = moment().toString()
           this.formData.to_date = moment().toString()
           break
 
-        case 'This Week':
+        case 'Esta semana':
           this.formData.from_date = this.getThisDate('startOf', 'isoWeek')
           this.formData.to_date = this.getThisDate('endOf', 'isoWeek')
           break
 
-        case 'This Month':
+        case 'Este mes':
           this.formData.from_date = this.getThisDate('startOf', 'month')
           this.formData.to_date = this.getThisDate('endOf', 'month')
           break
 
-        case 'This Quarter':
+        case 'Este trimestre':
           this.formData.from_date = this.getThisDate('startOf', 'quarter')
           this.formData.to_date = this.getThisDate('endOf', 'quarter')
           break
 
-        case 'This Year':
+        case 'Este año':
           this.formData.from_date = this.getThisDate('startOf', 'year')
           this.formData.to_date = this.getThisDate('endOf', 'year')
           break
 
-        case 'Previous Week':
+        case 'Semana anterior':
           this.formData.from_date = this.getPreDate('startOf', 'isoWeek')
           this.formData.to_date = this.getPreDate('endOf', 'isoWeek')
           break
 
-        case 'Previous Month':
+        case 'Mes anterior':
           this.formData.from_date = this.getPreDate('startOf', 'month')
           this.formData.to_date = this.getPreDate('endOf', 'month')
           break
 
-        case 'Previous Quarter':
+        case 'Trimestre anterior':
           this.formData.from_date = this.getPreDate('startOf', 'quarter')
           this.formData.to_date = this.getPreDate('endOf', 'quarter')
           break
 
-        case 'Previous Year':
+        case 'Año anterior':
           this.formData.from_date = this.getPreDate('startOf', 'year')
           this.formData.to_date = this.getPreDate('endOf', 'year')
           break
@@ -177,7 +177,7 @@ export default {
       }
     },
     setRangeToCustom () {
-      this.selectedRange = 'Custom'
+      this.selectedRange = 'Personalizado'
     },
     async viewReportsPDF () {
       let data = await this.getReports()

@@ -201,7 +201,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <p class="sub-heading-text text-center">Sales Report: By Customer</p>
+                        <p class="sub-heading-text text-center">Reporte de ventas: Por Cliente</p>
                     </td>
                 </tr>
             </table>
@@ -246,7 +246,7 @@
         <table class="profit-table">
             <tr>
                 <td>
-                    <p class="profit-title">TOTAL SALES</p>
+                    <p class="profit-title">TOTAL VENTAS</p>
                 </td>
                 <td>
                     <p class="profit-money">{!! format_money_pdf($totalAmount) !!}</p>
