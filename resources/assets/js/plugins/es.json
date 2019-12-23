@@ -772,9 +772,9 @@
   },
   "layout_login": {
     "copyright_crater": "Copyright @ PFS Tech - 2019",
-    "super_simple_invoicing": "Plataforma de Gestión de Gastos y Presupuestos",
-    "for_freelancer": "",
-    "small_businesses": "",
+    "super_simple_invoicing": "Plataforma de Gestión",
+    "for_freelancer": "de Gastos, Facturas",
+    "small_businesses": " y Presupuestos",
     "crater_help": "Registra gastos, presupuestos y facturas de manera sencilla y agradable",
     "invoices_and_estimates": "facturas y presupuestos con capacidad para elegir múltiples plantillas."
 
