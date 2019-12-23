@@ -1,11 +1,11 @@
 @component('mail::message')
 # Introduction
-Customer viewed this Estimate.
+El cliente ha visto este presupuesto.
 
 @component('mail::button', ['url' => url('/admin/estimates/'.$data['estimate']['id'].'/view')])
-Estimate
+Presupuesto
 @endcomponent
 
-Thanks,<br>
+Gracias,<br>
 {{ config('app.name') }}
 @endcomponent

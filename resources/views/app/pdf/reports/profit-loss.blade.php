@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Profit & Loss Report</title>
+    <title>Informe de pérdidas y ganancias</title>
     {{-- <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> --}}
     <style type="text/css">
         body {
@@ -199,7 +199,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <p class="sub-heading-text">PROFIT & LOSS REPORT</p>
+                        <p class="sub-heading-text">REPORTE DE PÉRDIDAS Y GANANCIAS</p>
                     </td>
                 </tr>
             </table>
@@ -207,14 +207,14 @@
             <table class="income-table">
                 <tr>
                     <td>
-                        <p class="income-title">Income</p>
+                        <p class="income-title">Ingresos</p>
                     </td>
                     <td>
                         <p class="income-money">{!! format_money_pdf($income) !!}</p>
                     </td>
                 </tr>
             </table>
-            <p class="expenses-title">Expenses</p>
+            <p class="expenses-title">Gastos</p>
             <div class="expenses-table-container">
                 <table class="expenses-table">
                     @foreach ($expenseCategories as $expenseCategory)
@@ -242,7 +242,7 @@
         <table class="profit-table">
             <tr>
                 <td>
-                    <p class="profit-title">NET PROFIT</p>
+                    <p class="profit-title">GANANCIA NETA</p>
                 </td>
                 <td>
                     <p class="profit-money">{!! format_money_pdf(($income-$totalExpense)) !!}</p>

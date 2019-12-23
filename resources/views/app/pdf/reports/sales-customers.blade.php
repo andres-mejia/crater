@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sales Customer Report</title>
+    <title>Reporte de ventas por cliente</title>
     {{-- <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> --}}
     <style type="text/css">
         body {
@@ -209,7 +209,7 @@
             {{-- <table class="income-table">
                 <tr>
                     <td>
-                        <p class="income-title">Income</p>
+                        <p class="income-title">Ingresos</p>
                     </td>
                     <td>
                         <p class="income-money">{{ $income }}</p>

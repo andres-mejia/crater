@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Expenses Report</title>
+    <title>Reporte de Gastos</title>
     {{-- <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> --}}
     <style type="text/css">
         body {
@@ -171,11 +171,11 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <p class="sub-heading-text">EXPENSES REPORT</p>
+                        <p class="sub-heading-text">REPORTE DE GASTOS</p>
                     </td>
                 </tr>
             </table>
-            <p class="expenses-title">Expenses</p>
+            <p class="expenses-title">Gastos</p>
             <div class="expenses-table-container">
                 <table class="expenses-table">
                     @foreach ($expenseCategories as $expenseCategory)
@@ -202,7 +202,7 @@
         <table class="total-expense-table">
             <tr>
                 <td>
-                    <p class="total-expense-title">TOTAL EXPENSE</p>
+                    <p class="total-expense-title">TOTAL GASTOS</p>
                 </td>
                 <td>
                     <p class="total-expense-money">{!! format_money_pdf($totalExpense) !!}</p>

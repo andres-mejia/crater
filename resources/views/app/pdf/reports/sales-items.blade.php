@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sales Item Report</title>
+    <title>Reporte de Items por Artículos</title>
     {{-- <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> --}}
     <style type="text/css">
         body {
@@ -209,14 +209,14 @@
             {{-- <table class="income-table">
                 <tr>
                     <td>
-                        <p class="income-title">Income</p>
+                        <p class="income-title">Ingresos</p>
                     </td>
                     <td>
                         <p class="income-money">{{ $income }}</p>
                     </td>
                 </tr>
             </table> --}}
-            <p class="expenses-title">Items</p>
+            <p class="expenses-title">Artículos</p>
             @foreach ($items as $item)
                 <div class="expenses-table-container">
                     <table class="expenses-table">

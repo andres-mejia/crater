@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Tax Summary Report</title>
+    <title>Reporte Resumen de Impuestos</title>
     {{-- <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> --}}
     <style type="text/css">
         body {
@@ -182,11 +182,11 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <p class="sub-heading-text">TAX REPORT</p>
+                        <p class="sub-heading-text">REPORTE DE IMPUESTOS</p>
                     </td>
                 </tr>
             </table>
-            <p class="types-title">Tax Types</p>
+            <p class="types-title">Tipo de Impuesto</p>
             <div class="tax-table-container">
                 <table class="tax-table">
                     @foreach ($taxTypes as $tax)
@@ -214,7 +214,7 @@
         <table class="total-tax-table">
             <tr>
                 <td>
-                    <p class="total-tax-title">TOTAL TAX</p>
+                    <p class="total-tax-title">TOTAL IMPUESTOS</p>
                 </td>
                 <td>
                     <p class="total-tax-money">{!! format_money_pdf($totalTaxAmount) !!}</p>

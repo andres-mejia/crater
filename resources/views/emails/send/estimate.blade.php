@@ -16,16 +16,16 @@
     {{-- Subcopy --}}
     @slot('subcopy')
         @component('mail::subcopy')
-            You have received a new estimate from <span class="company-name">{{$data['company']['name']}}</span>
+            Ha recibido un nuevo presupuesto de <span class="company-name">{{$data['company']['name']}}</span>
             @component('mail::button', ['url' => url('/customer/estimates/pdf/'.$data['estimate']['unique_hash'])])
-                View Estimate
+                Ver Presupuesto
             @endcomponent
         @endcomponent
     @endslot
      {{-- Footer --}}
      @slot('footer')
         @component('mail::footer')
-            Powered by <a class="footer-link" href="https://craterapp.com">Crater</a>
+            Provisto por <a class="footer-link" href="https://pfstech.es">Plataforma de compras</a>
         @endcomponent
     @endslot
 @endcomponent

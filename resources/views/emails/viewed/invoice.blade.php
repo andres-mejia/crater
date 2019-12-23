@@ -1,11 +1,11 @@
 @component('mail::message')
 # Introduction
-Customer viewed this Invoice.
+El cliente ha visto esta factura.
 
 @component('mail::button', ['url' => url('/admin/invoices/'.$data['invoice']['id'].'/view')])
-Invoice
+Factura
 @endcomponent
 
-Thanks,<br>
+Gracias,<br>
 {{ config('app.name') }}
 @endcomponent

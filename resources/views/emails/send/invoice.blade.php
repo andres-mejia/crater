@@ -16,16 +16,16 @@
     {{-- Subcopy --}}
     @slot('subcopy')
         @component('mail::subcopy')
-            You have received a new invoice from <span class="company-name">{{$data['company']['name']}}</span>
+            Ha recibido una nueva factura de  <span class="company-name">{{$data['company']['name']}}</span>
             @component('mail::button', ['url' => url('/customer/invoices/pdf/'.$data['invoice']['unique_hash'])])
-                View Invoice
+                Ver Factura
             @endcomponent
         @endcomponent
     @endslot
      {{-- Footer --}}
      @slot('footer')
         @component('mail::footer')
-            Powered by <a class="footer-link" href="https://craterapp.com">Crater</a>
+        Provisto por <a class="footer-link" href="https://pfstech.es">Plataforma de compras</a>
         @endcomponent
     @endslot
 @endcomponent
