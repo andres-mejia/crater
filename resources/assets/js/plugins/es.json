@@ -24,7 +24,7 @@
     "to": "A",
     "go_back": "Regresa",
     "back_to_login": "¿Atrás para iniciar sesión?",
-    "home": "Casa",
+    "home": "Inicio",
     "filter": "Filtrar",
     "delete": "Eliminar",
     "edit": "Editar",
@@ -61,7 +61,7 @@
     "no_tax_found": "¡No se encontraron impuestos!",
     "four_zero_four": "404",
     "you_got_lost": "Whoops! ¡Te perdiste!",
-    "go_home": "Vete a casa",
+    "go_home": "Ir a inicio",
 
     "setting_updated": "Configuración actualizada con éxito",
     "select_state": "Seleccione estado",
