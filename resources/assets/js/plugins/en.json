@@ -453,17 +453,17 @@
   },
   "login": {
     "email": "Email",
-    "password": "Password",
-    "forgot_password": "Forgot Password?",
-    "or_signIn_with": "or Sign in with",
-    "login": "Login",
-    "register": "Register",
-    "reset_password": "Reset Password",
-    "password_reset_successfully": "Password Reset Successfully",
-    "enter_email": "Enter email",
-    "enter_password": "Enter Password",
-    "retype_password": "Retype Password",
-    "login_placeholder": "mail@example.com"
+    "password": "Contraseña",
+    "forgot_password": "Olvidó su contraseña?",
+    "or_signIn_with": "o Inicia con",
+    "login": "Iniciar",
+    "register": "Registrar",
+    "reset_password": "Recuperar contraseña",
+    "password_reset_successfully": "Solicitud de recuperación de clave enviada.",
+    "enter_email": "Ingrese email",
+    "enter_password": "Ingrese contraseña",
+    "retype_password": "Vuelva a ingresar la contraseña",
+    "login_placeholder": "mail@server.com"
   },
   "reports": {
     "title": "Report",
