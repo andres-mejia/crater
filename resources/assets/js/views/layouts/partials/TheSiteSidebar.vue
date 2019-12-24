@@ -37,7 +37,7 @@ export default {
           },
           {
             title: 'navigation.estimates',
-            icon: 'business-time',
+            icon: 'business',
             route: '/admin/estimates'
           },
           {
