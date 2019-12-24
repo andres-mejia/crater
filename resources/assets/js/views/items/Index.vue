@@ -167,10 +167,11 @@
           :label="$t('items.name')"
           show="name"
         />
+        <!--
         <table-column
           :label="$t('items.unit')"
           show="unit"
-        />
+        />-->
         <table-column
           :label="$t('items.price')"
           show="price"
@@ -252,7 +253,7 @@ export default {
       filtersApplied: false,
       filters: {
         name: '',
-        unit: '',
+        /*unit: '',*/
         price: ''
       }
     }
