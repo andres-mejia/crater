@@ -7,7 +7,7 @@
             <a href="/admin">
               <img
                 src="/assets/img/crater-logo.png"
-                alt="Crater Logo">
+                alt="Sistema de Compras Logo">
             </a>
           </div>
           <router-view></router-view>

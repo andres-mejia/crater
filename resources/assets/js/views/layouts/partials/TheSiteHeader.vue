@@ -4,13 +4,13 @@
       <img
         id="logo-white"
         src="/assets/img/logo-white.png"
-        alt="Crater Logo"
+        alt="Sistema de compras Logo"
         class="d-none d-md-inline"
       >
       <img
         id="logo-mobile"
         src="/assets/img/crater-white-small.png"
-        alt="Laraspace Logo"
+        alt="Sistema de compras Logo"
         class="d-md-none">
     </a>
 
