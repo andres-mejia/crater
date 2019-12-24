@@ -36,6 +36,11 @@ export default {
             route: '/admin/dashboard'
           },
           {
+            title: 'navigation.estimates',
+            icon: 'business-time',
+            route: '/admin/estimates'
+          },
+          {
             title: 'navigation.customers',
             icon: 'user',
             route: '/admin/customers'
@@ -48,11 +53,6 @@ export default {
         ],
 
         [
-          {
-            title: 'navigation.estimates',
-            icon: 'file',
-            route: '/admin/estimates'
-          },
           {
             title: 'navigation.invoices',
             icon: 'file-alt',
