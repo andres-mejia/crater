@@ -60,7 +60,7 @@
               autocomplete="off"
             />
           </div>
-          <div class="col-sm-4">
+          <!--<div class="col-sm-4">
             <label class="form-label"> {{ $tc('items.unit') }} </label>
             <base-select
               v-model="filters.unit"
@@ -71,7 +71,7 @@
               label="name"
               autocomplete="off"
             />
-          </div>
+          </div>-->
           <div class="col-sm-4">
             <label class="form-label"> {{ $tc('items.price') }} </label>
             <base-input
