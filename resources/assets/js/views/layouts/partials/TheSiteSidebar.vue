@@ -37,7 +37,7 @@ export default {
           },
           {
             title: 'navigation.estimates',
-            icon: 'business',
+            icon: 'briefcase',
             route: '/admin/estimates'
           },
           {
