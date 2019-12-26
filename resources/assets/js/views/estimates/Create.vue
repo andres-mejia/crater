@@ -538,10 +538,10 @@ export default {
         },
         expiry_date: {
           required
-        } /*
+        },
         estimate_number: {
           required
-        },*/,
+        },
         discount_val: {
           between: between(0, this.subtotal)
         },
