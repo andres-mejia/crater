@@ -246,7 +246,7 @@
               >{{ $t('validation.required') }}</span>
             </div>
           </div>
-          <!-- Numbers -->
+          <! -- Numbers -- >
           <div class="row mt-4">
             <div class="col collapse-input">
               <label>
