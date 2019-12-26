@@ -67,7 +67,7 @@
                   <div class="base-input">
                     <money
                       :class="{'invalid' : $v.newEstimate.quantity.$error}"
-                      v-model="quantity"
+                      v-model="newEstimate.quantity"
                       v-bind="defaultCurrency"
                       class="input-field"
                     />
@@ -90,7 +90,7 @@
                 <div class="form-group">
                   <label>{{ $t('estimates.type') }}</label>
                   <base-select
-                    v-model="estimates.type"
+                    v-model="newEstimate.type"
                     :options="estimateTypes"
                     :searchable="true"
                     :show-labels="false"
