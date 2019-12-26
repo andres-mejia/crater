@@ -121,7 +121,8 @@
           </div>
         </div>
 
-        <!-- Provider -->
+<!--
+        <! -- Provider -- >
         <div class="col-md-5 estimate-customer-container">
           <div v-if="selectedCustomer" class="show-customer">
             <div class="row px-2 mt-1">
@@ -206,9 +207,10 @@
             <customer-select-popup type="estimate" />
           </base-popup>
         </div>
-
+-->
+<!--
         <div class="col estimate-input">
-          <!-- Dates -->
+          <! -- Dates -- >
           <div class="row mb-3">
             <div class="col collapse-input">
               <label>
@@ -279,7 +281,7 @@
           </div>
         </div>
       </div>
-
+-->
       <!-- Detail
       <table class="item-table">
         <colgroup>
