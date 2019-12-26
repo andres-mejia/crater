@@ -13,6 +13,11 @@ class Budget extends Migration
      */
     public function up()
     {
+        if (Schema::hasTable('budgets')) {
+            $this->down();
+        }
+
+        
         Schema::create('budgets', function (Blueprint $table) {
             $table->increments('id');
             $table->date('budget_date');
