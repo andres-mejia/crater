@@ -457,7 +457,7 @@ import { validationMixin } from "vuelidate";
 import Guid from "guid";
 import TaxStub from "../../stub/tax";
 import Tax from "./EstimateTax";
-const { required, between, maxLength } = require("vuelidate/lib/validators");
+const { required, between, numeric, minValue, minLength, maxLength } = require("vuelidate/lib/validators");
 
 export default {
   components: {
