@@ -29,8 +29,8 @@ class Budget extends Migration
             $table->integer('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             
-            $table->integer('budget_template_id')->unsigned()->nullable();
-            $table->foreign('budget_template_id')->references('id')->on('budget_templates');
+            //$table->integer('budget_template_id')->unsigned()->nullable();
+            //$table->foreign('budget_template_id')->references('id')->on('budget_templates');
             
             $table->integer('company_id')->unsigned()->nullable();
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
