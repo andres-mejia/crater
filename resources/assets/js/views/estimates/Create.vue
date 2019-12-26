@@ -640,6 +640,12 @@ export default {
       });
 
       return taxes;
+    },
+    isEdit () {
+      if (this.$route.name === 'estimates.edit') {
+        return true
+      }
+      return false
     }
   },
   watch: {
