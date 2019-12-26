@@ -40,6 +40,97 @@
         </div>
       </div>
       <div class="row estimate-input-group">
+        <div class="col-sm-6">
+          <div class="card">
+              <div class="card-body">
+                <div class="form-group">
+                  <label class="control-label">{{ $t('items.name') }}</label>
+                  <span class="text-danger">*</span>
+                  <base-input
+                    v-model.trim="formData.name"
+                    :invalid="$v.formData.name.$error"
+                    focus
+                    type="text"
+                    name="name"
+                    @input="$v.formData.name.$touch()"
+                  />
+                  <div v-if="$v.formData.name.$error">
+                    <span
+                      v-if="!$v.formData.name.required"
+                      class="text-danger"
+                    >{{ $t('validation.required') }}</span>
+                    <span
+                      v-if="!$v.formData.name.minLength"
+                      class="text-danger"
+                    >{{ $tc('validation.name_min_length', $v.formData.name.$params.minLength.min, { count: $v.formData.name.$params.minLength.min }) }}</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>{{ $t('items.price') }}</label>
+                  <span class="text-danger">*</span>
+                  <div class="base-input">
+                    <money
+                      :class="{'invalid' : $v.formData.price.$error}"
+                      v-model="price"
+                      v-bind="defaultCurrencyForInput"
+                      class="input-field"
+                    />
+                  </div>
+                  <div v-if="$v.formData.price.$error">
+                    <span
+                      v-if="!$v.formData.price.required"
+                      class="text-danger"
+                    >{{ $t('validation.required') }}</span>
+                    <span
+                      v-if="!$v.formData.price.maxLength"
+                      class="text-danger"
+                    >{{ $t('validation.price_maxlength') }}</span>
+                    <span
+                      v-if="!$v.formData.price.minValue"
+                      class="text-danger"
+                    >{{ $t('validation.price_minvalue') }}</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>{{ $t('items.unit') }}</label>
+                  <base-select
+                    v-model="formData.unit"
+                    :options="units"
+                    :searchable="true"
+                    :show-labels="false"
+                    :placeholder="$t('items.select_a_unit')"
+                    label="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="description">{{ $t('items.description') }}</label>
+                  <base-text-area
+                    v-model="formData.description"
+                    rows="2"
+                    name="description"
+                    @input="$v.formData.description.$touch()"
+                  />
+                  <div v-if="$v.formData.description.$error">
+                    <span
+                      v-if="!$v.formData.description.maxLength"
+                      class="text-danger"
+                    >{{ $t('validation.description_maxlength') }}</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <base-button
+                    :loading="isLoading"
+                    :disabled="isLoading"
+                    icon="save"
+                    color="theme"
+                    type="submit"
+                    class="collapse-button"
+                  >{{ isEdit ? $t('items.update_item') : $t('items.save_item') }}</base-button>
+                </div>
+              </div>
+          </div>
+        </div>
+
         <!-- Provider -->
         <div class="col-md-5 estimate-customer-container">
           <div v-if="selectedCustomer" class="show-customer">
@@ -247,7 +338,7 @@
         {{ $t('estimates.add_item') }}
       </div>
       -->
-      
+
       <!-- Footer Totals and Notes
       <div class="estimate-foot">
         <div>
@@ -430,10 +521,10 @@ export default {
         },
         expiry_date: {
           required
-        },
+        } /*
         estimate_number: {
           required
-        },
+        },*/,
         discount_val: {
           between: between(0, this.subtotal)
         },

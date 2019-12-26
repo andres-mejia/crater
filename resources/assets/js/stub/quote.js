@@ -1,13 +1,10 @@
 export default {
   estimate_id: null,
+  item_id: null,
   name: '',
   title: '',
   description: null,
-  quantity: 0,
-  period:'',
-  status:'',
-  type:'',
-  
+  quantity: 1,
   price: 0,
   discount_type: 'fixed',
   discount_val: 0,
@@ -17,6 +14,5 @@ export default {
   totalSimpleTax: 0,
   totalCompoundTax: 0,
   tax: 0,
-  item_id: null,
   taxes: []
 }
