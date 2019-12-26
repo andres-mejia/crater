@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use Crater\CompanySetting;
 use Carbon\Carbon;
 
-class Budget extends Model
+class Quote extends Model
 {
     const STATUS_DRAFT = 'DRAFT';
     const STATUS_SENT = 'SENT';

@@ -13,7 +13,31 @@ class Budget extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('budgets', function (Blueprint $table) {
+            $table->increments('id');
+            $table->date('budget_date');
+            $table->date('expiry_date');
+            $table->uuid('uuid');
+            $table->year('period');
+            $table->enum('status', ['draft', 'approved', 'closed']);
+            $table->integer('typeId');
+            $table->string('code')->nullable();
+            $table->longText('notes')->nullable();
+            $table->decimal('total', 15, 2)->nullable();
+            
+            // relations
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            
+            $table->integer('budget_template_id')->unsigned()->nullable();
+            $table->foreign('budget_template_id')->references('id')->on('budget_templates');
+            
+            $table->integer('company_id')->unsigned()->nullable();
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
+            
+            $table->softDeletes();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -24,5 +48,6 @@ class Budget extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('budgets');
     }
 }
