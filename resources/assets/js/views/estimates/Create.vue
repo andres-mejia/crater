@@ -44,7 +44,7 @@
           <div class="card">
               <div class="card-body">
                 <div class="form-group">
-                  <label class="control-label">{{ $t('items.name') }}</label>
+                  <label class="control-label">{{ $t('estimates.name') }}</label>
                   <span class="text-danger">*</span>
                   <base-input
                     v-model.trim="newEstimate.name"
@@ -59,63 +59,53 @@
                       v-if="!$v.newEstimate.name.required"
                       class="text-danger"
                     >{{ $t('validation.required') }}</span>
-                    <span
-                      v-if="!$v.newEstimate.name.minLength"
-                      class="text-danger"
-                    >{{ $tc('validation.name_min_length', $v.newEstimate.name.$params.minLength.min, { count: $v.newEstimate.name.$params.minLength.min }) }}</span>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label>{{ $t('items.price') }}</label>
+                  <label>{{ $t('estimates.quantity') }}</label>
                   <span class="text-danger">*</span>
                   <div class="base-input">
                     <money
-                      :class="{'invalid' : $v.newEstimate.price.$error}"
-                      v-model="price"
-                      v-bind="defaultCurrencyForInput"
+                      :class="{'invalid' : $v.newEstimate.quantity.$error}"
+                      v-model="quantity"
+                      v-bind="defaultCurrency"
                       class="input-field"
                     />
                   </div>
-                  <div v-if="$v.newEstimate.price.$error">
+                  <div v-if="$v.newEstimate.quantity.$error">
                     <span
-                      v-if="!$v.newEstimate.price.required"
+                      v-if="!$v.newEstimate.quantity.required"
                       class="text-danger"
                     >{{ $t('validation.required') }}</span>
                     <span
-                      v-if="!$v.newEstimate.price.maxLength"
+                      v-if="!$v.newEstimate.quantity.maxLength"
                       class="text-danger"
-                    >{{ $t('validation.price_maxlength') }}</span>
+                    >{{ $t('validation.quantity_maxlength') }}</span>
                     <span
-                      v-if="!$v.newEstimate.price.minValue"
+                      v-if="!$v.newEstimate.quantity.minValue"
                       class="text-danger"
-                    >{{ $t('validation.price_minvalue') }}</span>
+                    >{{ $t('validation.quantity_minvalue') }}</span>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label>{{ $t('items.unit') }}</label>
+                  <label>{{ $t('estimates.type') }}</label>
                   <base-select
-                    v-model="newEstimate.unit"
-                    :options="units"
+                    v-model="estimates.type"
+                    :options="estimateTypes"
                     :searchable="true"
                     :show-labels="false"
-                    :placeholder="$t('items.select_a_unit')"
+                    :placeholder="$t('estimates.select_a_type')"
                     label="name"
                   />
                 </div>
                 <div class="form-group">
-                  <label for="description">{{ $t('items.description') }}</label>
+                  <label for="description">{{ $t('estimates.notes') }}</label>
                   <base-text-area
                     v-model="newEstimate.description"
                     rows="2"
                     name="description"
                     @input="$v.newEstimate.description.$touch()"
                   />
-                  <div v-if="$v.newEstimate.description.$error">
-                    <span
-                      v-if="!$v.newEstimate.description.maxLength"
-                      class="text-danger"
-                    >{{ $t('validation.description_maxlength') }}</span>
-                  </div>
                 </div>
                 <div class="form-group">
                   <base-button
@@ -125,7 +115,7 @@
                     color="theme"
                     type="submit"
                     class="collapse-button"
-                  >{{ isEdit ? $t('items.update_item') : $t('items.save_item') }}</base-button>
+                  >{{ isEdit ? $t('estimates.update_Estimate') : $t('estimates.save_estimate') }}</base-button>
                 </div>
               </div>
           </div>
@@ -479,7 +469,19 @@ export default {
   mixins: [validationMixin],
   data() {
     return {
+      estimateTypes: [
+        { name: 'Recurrente', value: 'rec' },
+        { name: 'Estratégico', value: 'est' }
+      ],
       newEstimate: {
+        name: '',
+        title: '',
+        period: '',
+        status:'',
+        type:'',
+        description:'',
+        quantity: 0,
+
         estimate_date: null,
         expiry_date: null,
         estimate_number: null,
@@ -516,6 +518,21 @@ export default {
   validations() {
     return {
       newEstimate: {
+        name: {
+          required
+        },
+        title: {
+          required
+        },
+        period: {
+          required
+        },
+        quantity: {
+          required,
+          numeric,
+          maxLength: maxLength(20),
+          minValue: minValue(0.1)
+        },
         estimate_date: {
           required
         },

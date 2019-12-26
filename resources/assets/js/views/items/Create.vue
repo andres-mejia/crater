@@ -124,7 +124,7 @@ export default {
       money: {
         decimal: '.',
         thousands: ',',
-        prefix: '$ ',
+        prefix: 'EUR ',
         precision: 2,
         masked: false
       }
