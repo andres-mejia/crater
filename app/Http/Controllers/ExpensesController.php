@@ -107,7 +107,7 @@ class ExpensesController extends Controller
     public function edit(Request $request,$id)
     {
         $categories = ExpenseCategory::whereCompany($request->header('company'))->get();
-        $customers = User::where('role', 'customer')->whereCompany($request->header('company'))->get();
+        $customers = User::where('role_name', 'customer')->whereCompany($request->header('company'))->get();
         $expense = Expense::with('category')->where('id', $id)->first();
 
         return response()->json([

@@ -17,7 +17,7 @@ $factory->define(Estimate::class, function (Faker $faker) {
         'reference_number' => Estimate::getNextEstimateNumber(),
         'company_id' => User::find(1)->company_id,
         'user_id' => function () {
-            return factory(User::class)->create(['role' => 'customer'])->id;
+            return factory(User::class)->create(['role_name' => 'customer'])->id;
         },
         'status' => Estimate::STATUS_DRAFT,
         'estimate_template_id' => 1,

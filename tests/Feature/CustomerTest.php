@@ -42,7 +42,7 @@ class CustomerTest extends TestCase
     {
         $customer = factory(User::class)->raw([
             'password' => 'secret',
-            'role' => 'customer'
+            'role_name' => 'customer'
         ]);
 
         $response = $this->json('POST', 'api/customers', $customer);
@@ -82,7 +82,7 @@ class CustomerTest extends TestCase
     /** @test */
     public function testGetUpdateCustomerData()
     {
-        $customer = factory(User::class)->create(['role' => 'customer']);
+        $customer = factory(User::class)->create(['role_name' => 'customer']);
 
         $response = $this->json('GET', 'api/customers/'.$customer->id.'/edit');
 
@@ -102,8 +102,8 @@ class CustomerTest extends TestCase
     /** @test */
     public function testUpdateCustomer()
     {
-        $customer = factory(User::class)->create(['role' => 'customer']);
-        $customer2 = factory(User::class)->raw(['role' => 'customer']);
+        $customer = factory(User::class)->create(['role_name' => 'customer']);
+        $customer2 = factory(User::class)->raw(['role_name' => 'customer']);
 
         $response = $this->json('PUT', 'api/customers/'.$customer->id, $customer2);
 
@@ -127,7 +127,7 @@ class CustomerTest extends TestCase
     /** @test */
     public function testDeleteCustomer()
     {
-        $customer = factory(User::class)->create(['role' => 'customer']);
+        $customer = factory(User::class)->create(['role_name' => 'customer']);
 
         $response = $this->json('DELETE', 'api/customers/'.$customer->id);
 
@@ -162,7 +162,7 @@ class CustomerTest extends TestCase
     /** @test */
     public function testDeleteMultipleCustomer()
     {
-        $customers = factory(User::class, 3)->create(['role' => 'customer']);
+        $customers = factory(User::class, 3)->create(['role_name' => 'customer']);
 
         $ids = $customers->pluck('id');
 

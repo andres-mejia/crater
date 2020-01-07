@@ -16,7 +16,7 @@ $factory->define(Invoice::class, function (Faker $faker) {
         'invoice_number' => 'INV-'.Invoice::getNextInvoiceNumber(),
         'reference_number' => Invoice::getNextInvoiceNumber(),
         'user_id' => function () {
-            return factory(User::class)->create(['role' => 'customer'])->id;
+            return factory(User::class)->create(['role_name' => 'customer'])->id;
         },
         'invoice_template_id' => 1,
         'status' => Invoice::STATUS_DRAFT,
