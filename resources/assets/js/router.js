@@ -92,7 +92,7 @@ const routes = [
    */
 
   {
-    path: '/',
+    path: '/app',
     component: LayoutLogin,
     meta: { redirectIfAuthenticated: true },
     children: [
@@ -145,7 +145,7 @@ const routes = [
    |--------------------------------------------------------------------------|
    */
   {
-    path: '/admin',
+    path: '/app/admin',
     component: LayoutBasic, // Change the desired Layout here
     meta: { requiresAuth: true },
     children: [
@@ -363,12 +363,12 @@ router.beforeEach((to, from, next) => {
   //  Redirect if not authenticated on secured routes
   if (to.matched.some(m => m.meta.requiresAuth)) {
     if (!store.getters['auth/isAuthenticated']) {
-      return next('/login')
+      return next('/app/login')
     }
   }
 
   if (to.matched.some(m => m.meta.redirectIfAuthenticated) && store.getters['auth/isAuthenticated']) {
-    return next('/admin/dashboard')
+    return next('/app/admin/dashboard')
   }
 
   return next()
