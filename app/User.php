@@ -16,7 +16,7 @@ use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Illuminate\Support\Facades\DB;
 use Laravel\Passport\HasApiTokens;
 
-class User extends Authenticatable implements HasMedia
+class User extends \TCG\Voyager\Models\User implements HasMedia
 {
     use HasApiTokens, Notifiable, HasMediaTrait;
 
@@ -246,12 +246,13 @@ class User extends Authenticatable implements HasMedia
         return true;
     }
 
-    public function getAvatarAttribute()
+    public function getAvatarAttribute($value = null)
     {
         $avatar = $this->getMedia('admin_avatar')->first();
         if ($avatar) {
             return  asset($avatar->getUrl());
         }
-        return ;
+        return $this->getAvatarAttribute($value);
     }
+    
 }

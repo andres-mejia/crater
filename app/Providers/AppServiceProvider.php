@@ -23,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->singleton('VoyagerGuard', function () {
+            return 'admin'; 
+        });
+        
         /*ADD THIS LINES*/
         $this->commands([
             \Laravel\Passport\Console\InstallCommand::class,

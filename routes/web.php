@@ -75,11 +75,20 @@ Route::get('/expenses/{id}/receipt/{hash}', [
 ]);
 
 
-Route::get('/on-boarding', function () {
+/*Route::get('/on-boarding', function () {
     return view('app');
 })->name('install')->middleware('redirect-if-installed');
+
 
 
 Route::get('/{vue?}', function () {
     return view('app');
 })->where('vue', '[\/\w\.-]*')->name('home')->middleware('install');
+*/
+
+Route::get('/on-boarding', 'Controller@getApp')->name('install')->middleware('redirect-if-installed');
+Route::get('/app/{vue?}', 'Controller@getApp')->where('vue', '[\/\w\.-]*')->name('home')->middleware('install');
+
+Route::group(['prefix' => 'administrator'], function () {
+    Voyager::routes();
+});

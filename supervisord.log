@@ -59,3 +59,4 @@
 2019-12-26 17:03:32,798 INFO spawned: 'laravel-websockets_00' with pid 218
 2019-12-26 17:03:32,959 INFO exited: laravel-websockets_00 (exit status 1; not expected)
 2019-12-26 17:03:33,961 INFO gave up: laravel-websockets_00 entered FATAL state, too many start retries too quickly
+2020-01-07 09:31:03,079 INFO reaped unknown pid 677

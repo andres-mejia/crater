@@ -45,6 +45,11 @@ return [
             'driver' => 'passport',
             'provider' => 'users',
         ],
+        
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
     ],
 
     /*
@@ -68,6 +73,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => Crater\User::class,
+        ],
+        
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => Crater\User::class, /*App\Admin::class,*/
         ],
 
         // 'users' => [
