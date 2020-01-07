@@ -6,6 +6,10 @@
 |--------------------------------------------------------------------------
 |
 */
+Route::group(['prefix' => 'administrator'], function () {
+    Voyager::routes();
+});
+
 Route::group(['prefix' => 'reports'], function () {
 
     // sales report by customer
@@ -46,7 +50,6 @@ Route::group(['prefix' => 'reports'], function () {
         'as' => 'get.profit.loss',
         'uses' => 'ReportController@profitLossReport'
     ]);
-
 });
 
 Route::get('/invoices/pdf/{id}', [
@@ -74,9 +77,13 @@ Route::get('/expenses/{id}/receipt/{hash}', [
     'uses' => 'ExpensesController@downloadReceipt'
 ]);
 
-Route::get('/on-boarding', 'Controller@getApp')->name('install')->middleware('redirect-if-installed');
-Route::get('/{vue?}', 'Controller@getApp')->where('vue', '[\/\w\.-]*')->name('home')->middleware('install');
+Route::get('/on-boarding', 'Controller@getApp')
+    ->name('install')
+    ->middleware('redirect-if-installed');
 
-Route::group(['prefix' => 'administrator'], function () {
-    Voyager::routes();
-});
+
+Route::get('/{vue?}', 'Controller@getApp')
+    ->where('vue', '[\/\w\.-]*')
+    ->name('home')
+    ->middleware('install');
+
