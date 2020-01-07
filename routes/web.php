@@ -87,7 +87,8 @@ Route::get('/{vue?}', function () {
 */
 
 Route::get('/on-boarding', 'Controller@getApp')->name('install')->middleware('redirect-if-installed');
-Route::get('/app/{vue?}', 'Controller@getApp')->where('vue', '[\/\w\.-]*')->name('home')->middleware('install');
+//Route::get('/app/{vue?}', 'Controller@getApp')->where('vue', '[\/\w\.-]*')->name('home')->middleware('install');
+Route::get('/{vue?}', 'Controller@getApp')->where('vue', '[\/\w\.-]*')->name('home')->middleware('install');
 
 Route::group(['prefix' => 'administrator'], function () {
     Voyager::routes();

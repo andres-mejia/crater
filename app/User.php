@@ -252,7 +252,7 @@ class User extends \TCG\Voyager\Models\User implements HasMedia
         if ($avatar) {
             return  asset($avatar->getUrl());
         }
-        return $this->getAvatarAttribute($value);
+        return parent::getAvatarAttribute($value);
     }
     
 }
