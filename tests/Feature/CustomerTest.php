@@ -90,7 +90,7 @@ class CustomerTest extends TestCase
 
         $this->assertEquals($customer->name, $newCustomer['name']);
         $this->assertEquals($customer->email, $newCustomer['email']);
-        $this->assertEquals($customer->role, $newCustomer['role']);
+        $this->assertEquals($customer->role_name, $newCustomer['role']);
         $this->assertEquals($customer->phone, $newCustomer['phone']);
         $this->assertEquals($customer->company_name, $newCustomer['company_name']);
         $this->assertEquals($customer->contact_name, $newCustomer['contact_name']);

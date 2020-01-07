@@ -68,7 +68,7 @@ class User extends \TCG\Voyager\Models\User implements HasMedia
 
     public function isAdmin()
     {
-        return ($this->role == 'admin');
+        return ($this->role_name == 'admin');
     }
 
     public static function login($request)
