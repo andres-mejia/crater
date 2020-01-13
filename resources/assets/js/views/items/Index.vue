@@ -36,6 +36,7 @@
             {{ $t('general.filter') }}
           </base-button>
         </div>
+        <!--
         <router-link slot="item-title" class="col-xs-2" to="items/create">
           <base-button
             color="theme"
@@ -45,6 +46,7 @@
             {{ $t('items.add_item') }}
           </base-button>
         </router-link>
+        -->
       </div>
     </div>
 
@@ -52,7 +54,7 @@
       <div v-show="showFilters" class="filter-section">
         <div class="row">
           <div class="col-sm-4">
-            <label class="form-label"> {{ $tc('items.name') }} </label>
+            <label class="form-label"> {{ $tc('items.name') }} </label> 
             <base-input
               v-model="filters.name"
               type="text"
@@ -94,6 +96,7 @@
       <div class="row">
         <label class="description col mt-1" align="center">{{ $t('items.list_of_items') }}</label>
       </div>
+      <!--
       <div class="btn-container">
         <base-button
           :outline="true"
@@ -105,6 +108,7 @@
           {{ $t('items.add_new_item') }}
         </base-button>
       </div>
+      -->
     </div>
 
     <div v-show="!showEmptyScreen" class="table-container">

@@ -8,12 +8,14 @@ use Carbon\Carbon;
 
 class Item extends Model
 {
+    protected $table = "tbl_services";
+
     protected $fillable = [
-        'name',
+        /*'name',
         'unit',
         'price',
         'company_id',
-        'description'
+        'description'*/
     ];
 
     protected $casts = [

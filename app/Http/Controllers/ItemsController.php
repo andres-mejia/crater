@@ -12,7 +12,7 @@ class ItemsController extends Controller
 {
     public function index(Request $request)
     {
-        $limit = $request->has('limit') ? $request->limit : 10;
+        $limit = $request->has('limit') ? $request->limit : 100;
 
         $items = Item::applyFilters($request->only([
                 'search',

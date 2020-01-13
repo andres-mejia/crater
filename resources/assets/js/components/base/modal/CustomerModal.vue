@@ -91,8 +91,8 @@
 
           </tab>
 
-          <!-- tab-2 -->
-          <tab id="basic-profile" :name="$t('customers.billing_address')">
+          <!-- tab-2 
+          <tab id="basic-profile" :name="$t('customers.billing_address')" style="display:none">
             <div class="basic-info">
               <div class="form-group row">
                 <label class="col-sm-4 col-form-label input-label">{{ $t('customers.name') }}</label>
@@ -193,10 +193,10 @@
               </div>
 
             </div>
-          </tab>
+          </tab>-->
 
-          <!-- tab-3 -->
-          <tab id="basic-message" :name="$t('customers.shipping_address')">
+          <!-- tab-3 
+          <tab id="basic-message" :name="$t('customers.shipping_address')" style="display:none">
             <div class="basic-info">
               <div class="form-group row ">
                 <div class="col-sm-12 copy-address-button">
@@ -303,7 +303,7 @@
                 </div>
               </div>
             </div>
-          </tab>
+          </tab>-->
         </tabs>
       </div>
       <div class="card-footer">

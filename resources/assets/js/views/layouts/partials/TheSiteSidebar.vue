@@ -30,11 +30,11 @@ export default {
       menu: [
 
         [
-          {
+          /*{
             title: 'navigation.dashboard',
             icon: 'tachometer-alt',
             route: '/admin/dashboard'
-          },
+          },*/
           {
             title: 'navigation.estimates',
             icon: 'file',

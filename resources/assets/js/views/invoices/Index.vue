@@ -243,15 +243,19 @@
                 <dot-icon />
               </a>
               <v-dropdown-item>
+              
                 <router-link :to="{path: `invoices/${row.id}/edit`}" class="dropdown-item">
                   <font-awesome-icon :icon="['fas', 'pencil-alt']" class="dropdown-item-icon"/>
                   {{ $t('general.edit') }}
                 </router-link>
+              <!--
                 <router-link :to="{path: `invoices/${row.id}/view`}" class="dropdown-item">
                   <font-awesome-icon icon="eye" class="dropdown-item-icon" />
                   {{ $t('invoices.view') }}
                 </router-link>
-              </v-dropdown-item>
+                -->
+              </v-dropdown-item> 
+              <!--
               <v-dropdown-item v-if="row.status == 'DRAFT'">
                 <a class="dropdown-item" href="#/" @click="sendInvoice(row.id)" >
                   <font-awesome-icon icon="paper-plane" class="dropdown-item-icon" />
@@ -264,6 +268,7 @@
                   {{ $t('invoices.mark_as_sent') }}
                 </a>
               </v-dropdown-item>
+              -->
               <v-dropdown-item>
                 <div class="dropdown-item" @click="removeInvoice(row.id)">
                   <font-awesome-icon :icon="['fas', 'trash']" class="dropdown-item-icon" />

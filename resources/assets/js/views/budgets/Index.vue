@@ -20,6 +20,7 @@
       </ol>
       <div class="page-actions row">
         <div class="col-xs-2 mr-4">
+          <!--
           <base-button
             v-show="totalEstimates || filtersApplied"
             :outline="true"
@@ -31,7 +32,9 @@
           >
             {{ $t('general.filter') }}
           </base-button>
+          -->
         </div>
+        
         <router-link slot="item-title" class="col-xs-2" to="budgets/create">
           <base-button
             size="large"
@@ -120,6 +123,10 @@
 
         <!-- Tabs -->
         <ul class="tabs">
+          <li class="tab" @click="getStatus('')">
+            <a :class="['tab-link', {'a-active': filters.status === '' || filters.status !== 'DRAFT' && filters.status !== 'SENT'}]" href="#">{{ $t('general.all') }}</a>
+          </li>
+          <!--
           <li class="tab" @click="getStatus('DRAFT')">
             <a :class="['tab-link', {'a-active': filters.status === 'DRAFT'}]" href="#">{{ $t('general.draft') }}</a>
           </li>
@@ -128,7 +135,7 @@
           </li>
           <li class="tab" @click="getStatus('')">
             <a :class="['tab-link', {'a-active': filters.status === '' || filters.status !== 'DRAFT' && filters.status !== 'SENT'}]" href="#">{{ $t('general.all') }}</a>
-          </li>
+          </li>-->
         </ul>
         <transition name="fade">
           <v-dropdown v-if="selectedEstimates.length" :show-arrow="false">
@@ -195,6 +202,7 @@
           :label="$t('budgets.expiry_date')"
           sort-as="expiry_date"
           show="formattedExpiryDate" /> -->
+        <!--
         <table-column
           :label="$t('budgets.status')"
           show="status" >
@@ -203,7 +211,7 @@
             <span :class="'est-status-'+row.status.toLowerCase()">{{ row.status }}</span>
           </template>
         </table-column>
-        <!--
+        
         <table-column
           :label="$tc('budgets.estimate', 1)"
           show="estimate_number"/>
@@ -228,24 +236,27 @@
               <a slot="activator" href="#">
                 <dot-icon />
               </a>
+              <!--
               <v-dropdown-item>
                 <router-link :to="{path: `budgets/${row.id}/edit`}" class="dropdown-item">
                   <font-awesome-icon :icon="['fas', 'pencil-alt']" class="dropdown-item-icon" />
                   {{ $t('general.edit') }}
                 </router-link>
               </v-dropdown-item>
+              -->
               <v-dropdown-item>
                 <div class="dropdown-item" @click="removeEstimate(row.id)">
                   <font-awesome-icon :icon="['fas', 'trash']" class="dropdown-item-icon" />
                   {{ $t('general.delete') }}
                 </div>
               </v-dropdown-item>
-              <v-dropdown-item>
+              <!--<v-dropdown-item>
                 <router-link :to="{path: `budgets/${row.id}/view`}" class="dropdown-item">
                   <font-awesome-icon icon="eye" class="dropdown-item-icon" />
                   {{ $t('general.view') }}
                 </router-link>
               </v-dropdown-item>
+              
               <v-dropdown-item>
                 <a class="dropdown-item" href="#/" @click="convertInToinvoice(row.id)">
                   <font-awesome-icon icon="file-alt" class="dropdown-item-icon" />
@@ -275,7 +286,7 @@
                   <font-awesome-icon icon="times-circle" class="dropdown-item-icon" />
                   {{ $t('budgets.mark_as_rejected') }}
                 </a>
-              </v-dropdown-item>
+              </v-dropdown-item>-->
             </v-dropdown>
           </template>
         </table-column>
@@ -303,7 +314,7 @@ export default {
       isRequestOngoing: true,
       filters: {
         customer: '',
-        status: 'DRAFT',
+        status: '',
         from_date: '',
         to_date: '',
         estimate_number: ''

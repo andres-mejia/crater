@@ -40,6 +40,7 @@
             </div>
           </div>
         </div>
+        <!--
         <div class="form-group row">
           <label class="col-sm-4 col-form-label input-label">{{ $t('items.unit') }}</label>
           <div class="col-sm-7">
@@ -52,7 +53,7 @@
             />
           </div>
         </div>
-
+        -->
         <div class="form-group row">
           <label class="col-sm-4 col-form-label input-label">{{ $t('items.description') }}</label>
           <div class="col-sm-7">
