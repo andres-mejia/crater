@@ -129,7 +129,7 @@
               <label>{{ $t('invoices.invoice_number') }}<span class="text-danger"> * </span></label>
               <base-input
                 :invalid="$v.newInvoice.invoice_number.$error"
-                :read-only="true"
+                :read-only="false"
                 v-model="newInvoice.invoice_number"
                 icon="hashtag"
                 @input="$v.newInvoice.invoice_number.$touch()"
@@ -218,10 +218,12 @@
           <div v-if="$v.newInvoice.notes.$error">
             <span v-if="!$v.newInvoice.notes.maxLength" class="text-danger">{{ $t('validation.notes_maxlength') }}</span>
           </div>
+          <!--
           <label class="mt-3 mb-1 d-block">{{ $t('invoices.invoice_template') }} <span class="text-danger"> * </span></label>
           <base-button type="button" class="btn-template" icon="pencil-alt" right-icon @click="openTemplateModal" >
             <span class="mr-4"> {{ $t('invoices.template') }} {{ getTemplateId }} </span>
           </base-button>
+          -->
         </div>
 
         <div class="invoice-total">
@@ -237,6 +239,7 @@
               <div v-html="$utils.formatMoney(tax.amount, currency)" />
             </label>
           </div>
+   <!--       
           <div v-if="discountPerItem === 'NO' || discountPerItem === null" class="section mt-2">
             <label class="invoice-label">{{ $t('invoices.discount') }}</label>
             <div
@@ -272,8 +275,9 @@
                 </v-dropdown-item>
               </v-dropdown>
             </div>
-          </div>
 
+          </div>
+-->
           <div v-if="taxPerItem === 'NO' || taxPerItem === null">
             <tax
               v-for="(tax, index) in newInvoice.taxes"
@@ -297,7 +301,7 @@
           </base-popup>
 
           <div class="section border-top mt-3">
-            <label class="invoice-label">{{ $t('invoices.total') }} {{ $t('invoices.amount') }}:</label>
+            <label class="invoice-label">{{ $t('invoices.total') }}:</label>
             <label class="invoice-amount total">
               <div v-html="$utils.formatMoney(total, currency)" />
             </label>

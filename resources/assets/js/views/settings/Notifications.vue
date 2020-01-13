@@ -34,7 +34,9 @@
           > {{ $tc('settings.notification.save') }} </base-button>
         </div>
       </form>
+      
       <hr>
+      <!--
       <div class="flex-box mt-3 mb-4">
         <div class="left">
           <base-switch v-model="notify_invoice_viewed" class="btn-switch" @change="setInvoiceViewd"/>
@@ -44,6 +46,7 @@
           <p class="box-desc">  {{ $t('settings.notification.invoice_viewed_desc') }} </p>
         </div>
       </div>
+
       <div class="flex-box mb-2">
         <div class="left">
           <base-switch v-model="notify_estimate_viewed" class="btn-switch" @change="setEstimateViewd"/>
@@ -53,6 +56,7 @@
           <p class="box-desc">  {{ $t('settings.notification.estimate_viewed_desc') }} </p>
         </div>
       </div>
+      -->
     </div>
   </div>
 </template>

@@ -13,6 +13,7 @@ import company from './modules/company'
 import companyInfo from './modules/settings/company-info'
 import dashboard from './modules/dashboard'
 import estimate from './modules/estimate'
+import budget from './modules/budget'
 import expense from './modules/expense'
 import invoice from './modules/invoice'
 import userProfile from './modules/settings/user-profile'
@@ -50,6 +51,7 @@ export default new Vuex.Store({
     customer,
     dashboard,
     estimate,
+    budget,
     item,
     invoice,
     expense,

@@ -52,6 +52,12 @@ import EstimateIndex from './views/estimates/Index.vue'
 import EstimateCreate from './views/estimates/Create.vue'
 import EstimateView from './views/estimates/View.vue'
 
+
+// Budgets
+import BudgetIndex from './views/budgets/Index.vue'
+import BudgetCreate from './views/budgets/Create.vue'
+import BudgetView from './views/budgets/View.vue'
+
 // Expenses
 import ExpensesIndex from './views/expenses/Index'
 import ExpenseCreate from './views/expenses/Create.vue'
@@ -152,12 +158,12 @@ const routes = [
       // Dashbord
       {
         path: '/',
-        component: Dashboard,
-        name: 'dashboard'
+        component: BudgetIndex,
+        name: 'budgets'
       },
       {
         path: 'dashboard',
-        component: Dashboard
+        component: BudgetIndex
       },
 
       // Customer
@@ -345,7 +351,29 @@ const routes = [
             component: UpdateApp
           }
         ]
-      }
+      },
+
+      // Budgets
+      {
+        path: 'budgets',
+        name: 'budgets.index',
+        component: BudgetIndex
+      },
+      {
+        path: 'budgets/create',
+        name: 'budgets.create',
+        component: BudgetCreate
+      },
+      {
+        path: 'budgets/:id/view',
+        name: 'budgets.view',
+        component: BudgetView
+      },
+      {
+        path: 'budgets/:id/edit',
+        name: 'budgets.edit',
+        component: BudgetCreate
+      },
     ]
   },
 

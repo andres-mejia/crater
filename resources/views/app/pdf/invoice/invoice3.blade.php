@@ -43,7 +43,7 @@
             position: absolute;
             height: 50px;
             text-transform: capitalize;
-            color: #817AE3;
+            color: #d1a469;
         }
         .header-right {
             display:inline-block;

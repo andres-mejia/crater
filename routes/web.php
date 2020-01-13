@@ -6,7 +6,10 @@
 |--------------------------------------------------------------------------
 |
 */
+
 Route::group(['prefix' => 'administrator'], function () {
+    //Route::permanentRedirect('/', '/profile');
+    
     Voyager::routes();
 });
 

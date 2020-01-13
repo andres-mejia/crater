@@ -46,6 +46,7 @@
                   <span v-if="!$v.formData.price.minValue" class="text-danger">{{ $t('validation.price_minvalue') }}</span>
                 </div>
               </div>
+              <!--
               <div class="form-group">
                 <label>{{ $t('items.unit') }}</label>
                 <base-select
@@ -57,6 +58,7 @@
                   label="name"
                 />
               </div>
+              -->
               <div class="form-group">
                 <label for="description">{{ $t('items.description') }}</label>
                 <base-text-area

@@ -70,7 +70,7 @@ class CustomersController extends Controller
         $customer->contact_name = $request->contact_name;
         $customer->website = $request->website;
         $customer->enable_portal = $request->enable_portal;
-        $customer->role_name = 'customer';
+        $customer->role_name = 'provider';
         $customer->password = Hash::make($request->password);
         $customer->save();
 

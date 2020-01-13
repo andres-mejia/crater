@@ -66,7 +66,7 @@ class InvoicesController extends Controller
     {
         $tax_per_item = CompanySetting::getSetting('tax_per_item', $request->header('company'));
         $discount_per_item = CompanySetting::getSetting('discount_per_item', $request->header('company'));
-        $nextInvoiceNumber = "INV-".Invoice::getNextInvoiceNumber();
+        $nextInvoiceNumber = ""/*.Invoice::getNextInvoiceNumber()*/;
 
         return response()->json([
             'nextInvoiceNumber' => $nextInvoiceNumber,

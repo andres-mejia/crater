@@ -13,10 +13,10 @@ $factory->define(Invoice::class, function (Faker $faker) {
     return [
         'invoice_date' => $faker->date($format = 'd/m/Y', $max = 'now'),
         'due_date' => $faker->date($format = 'd/m/Y', $max = 'now'),
-        'invoice_number' => 'INV-'.Invoice::getNextInvoiceNumber(),
-        'reference_number' => Invoice::getNextInvoiceNumber(),
+        'invoice_number' => ''/*.Invoice::getNextInvoiceNumber()*/,
+        'reference_number' => '' /*Invoice::getNextInvoiceNumber()*/,
         'user_id' => function () {
-            return factory(User::class)->create(['role_name' => 'customer'])->id;
+            return factory(User::class)->create(['role_name' => 'provider'])->id;
         },
         'invoice_template_id' => 1,
         'status' => Invoice::STATUS_DRAFT,

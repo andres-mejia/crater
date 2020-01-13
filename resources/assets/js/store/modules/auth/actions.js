@@ -18,11 +18,11 @@ export const login = ({ commit, dispatch, state }, data) => {
       commit(rootTypes.UPDATE_APP_LOADING_STATUS, false, { root: true })
 
       commit(types.AUTH_SUCCESS, token)
-      window.toastr['success']('Login Successful')
+      //window.toastr['success']('Login Successful')
       resolve(response)
     }).catch(err => {
       if (err.response.data.error === 'invalid_credentials') {
-        window.toastr['error']('Invalid Credentials')
+        window.toastr['error']('Credenciales inválidas')
       } else {
         // Something happened in setting up the request that triggered an Error
         console.log('Error', err.message)
@@ -66,7 +66,7 @@ export const logout = ({ commit, dispatch, state }, noRequest = false) => {
       commit(types.AUTH_LOGOUT)
       Ls.remove('auth.token')
       router.push('/login')
-      window.toastr['success']('Logged out!', 'Success')
+      //window.toastr['success']('Logged out!', 'Success')
     }).catch(err => {
       reject(err)
       commit(types.AUTH_LOGOUT)

@@ -42,7 +42,7 @@
             height: 50px;
             margin-top: 20px;
             text-transform: capitalize;
-            color: #817AE3;
+            color: #d1a469;
         }
 
         .inv-flex{

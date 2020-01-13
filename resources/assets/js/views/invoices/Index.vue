@@ -51,7 +51,8 @@
               @deselect="clearCustomerSearch"
             />
           </div>
-          <div class="filter-status">
+          
+          <div class="filter-status" style="display:none;">
             <label>{{ $t('invoices.status') }}</label>
             <base-select
               v-model="filters.status"
@@ -67,6 +68,7 @@
               @remove="clearStatusSearch()"
             />
           </div>
+          
           <div class="filter-date">
             <div class="from pr-3">
               <label>{{ $t('general.from') }}</label>
@@ -127,7 +129,8 @@
           <li class="tab" @click="getStatus('UNPAID')">
             <a :class="['tab-link', {'a-active': filters.status.value === 'UNPAID'}]" href="#" >{{ $t('general.due') }}</a>
           </li>
-          <li class="tab" @click="getStatus('DRAFT')">
+          
+          <li class="tab" @click="getStatus('DRAFT')" style="display:none;">
             <a :class="['tab-link', {'a-active': filters.status.value === 'DRAFT'}]" href="#">{{ $t('general.draft') }}</a>
           </li>
           <li class="tab" @click="getStatus('')">
@@ -195,6 +198,7 @@
           width="20%"
           show="name"
         />
+      <!--
         <table-column
           :label="$t('invoices.status')"
           sort-as="status"
@@ -213,6 +217,7 @@
             <span :class="'inv-status-'+row.paid_status.toLowerCase()">{{ (row.paid_status != 'PARTIALLY_PAID')? row.paid_status : row.paid_status.replace('_', ' ') }}</span>
           </template>
         </table-column>
+        -->
         <table-column
           :label="$t('invoices.number')"
           show="invoice_number"

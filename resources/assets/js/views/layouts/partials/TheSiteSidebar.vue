@@ -38,7 +38,7 @@ export default {
           {
             title: 'navigation.estimates',
             icon: 'file',
-            route: '/admin/estimates'
+            route: '/admin/dashboard'
           },
           {
             title: 'navigation.customers',
@@ -49,15 +49,16 @@ export default {
             title: 'navigation.items',
             icon: 'star',
             route: '/admin/items'
-          }
-        ],
-
-        [
+          },
           {
             title: 'navigation.invoices',
             icon: 'file-alt',
             route: '/admin/invoices'
-          },
+          }
+        ],
+/*
+        [
+          ,
           {
             title: 'navigation.payments',
             icon: 'credit-card',
@@ -68,14 +69,14 @@ export default {
             icon: 'space-shuttle',
             route: '/admin/expenses'
           }
-        ],
+        ],*/
 
         [
-          {
+          /*{
             title: 'navigation.reports',
             icon: 'signal',
             route: '/admin/reports'
-          },
+          },*/
           {
             title: 'navigation.settings',
             icon: 'cog',

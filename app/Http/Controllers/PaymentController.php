@@ -53,7 +53,7 @@ class PaymentController extends Controller
         $nextPaymentNumber = 'PAY-'.Payment::getNextPaymentNumber();
 
         return response()->json([
-            'customers' => User::where('role_name', 'customer')
+            'customers' => User::where('role_name', 'provider')
                 ->whereCompany($request->header('company'))
                 ->get(),
             'nextPaymentNumber' => $nextPaymentNumber
@@ -132,7 +132,7 @@ class PaymentController extends Controller
             ->get();
 
         return response()->json([
-            'customers' => User::where('role_name', 'customer')
+            'customers' => User::where('role_name', 'provider')
                 ->whereCompany($request->header('company'))
                 ->get(),
             'nextPaymentNumber' => $payment->payment_number,

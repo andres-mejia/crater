@@ -104,7 +104,9 @@
               </div>
             </div>
           </div>
-          <hr> <!-- first row complete  -->
+         
+          <!-- <hr>  first row complete  -->
+         <!-- 
           <div class="row">
             <div class="section-title col-sm-2">{{ $t('customers.billing_address') }}</div>
             <div class="col-sm-5">
@@ -196,7 +198,9 @@
               </div>
             </div>
           </div>
-          <hr> <!-- second row complete  -->
+          -->
+          <!--<hr>  second row complete  -->
+          <!--
           <div class="same-address-checkbox-container">
             <div class="p-1">
               <base-button ref="sameAddress" icon="copy" color="theme" class="btn-sm" @click="copyAddress(true)">
@@ -309,7 +313,9 @@
               </div>
             </div>
           </div>
+          -->
         </div>
+
       </div>
     </form>
   </div>

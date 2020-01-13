@@ -8,10 +8,12 @@
         </p>
         <label class="input-label">{{ $t('settings.update_app.current_version') }}</label><br>
         <label class="version mb-4">{{ currentVersion }}</label>
+        <!--
         <base-button :outline="true" :disabled="isCheckingforUpdate || isUpdating" size="large" color="theme" class="mb-4" @click="checkUpdate">
           <font-awesome-icon :class="{'update': isCheckingforUpdate}" style="margin-right: 10px;" icon="sync-alt" />
           {{ $t('settings.update_app.check_update') }}
         </base-button>
+        -->
         <hr>
         <div v-show="!isUpdating" v-if="isUpdateAvailable" class="mt-4 content">
           <h3 class="page-title mb-3">{{ $t('settings.update_app.avail_update') }}</h3>

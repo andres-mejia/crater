@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "dashboard": "Tablero",
+    "dashboard": "Dashboard",
     "customers": "Proveedores",
     "items": "Servicios",
     "invoices": "Facturas",
@@ -44,7 +44,7 @@
     "ship_to": "Envie a",
     "due": "Debida",
     "draft": "Borrador",
-    "sent": "Expedida",
+    "sent": "Aprobado",
     "all": "Todas",
     "select_all": "Seleccionar todo",
     "choose_file": "Haga clic aquí para elegir un archivo.",
@@ -74,7 +74,7 @@
   "dashboard": {
     "select_year": "Seleccione año",
     "cards": {
-      "due_amount": "Monto adeudado",
+      "due_amount": "Cantidad adeudada",
       "customers": "Proveedores",
       "invoices": "Facturas",
       "estimates": "Presupuestos"
@@ -96,7 +96,7 @@
       "title": "Facturas adeudadas",
       "due_on": "Debido a",
       "customer": "Proveedor",
-      "amount_due": "Monto adeudado",
+      "amount_due": "Cantidad adeudada",
       "actions": "Comportamiento",
       "view_all": "Ver todo"
     },
@@ -104,7 +104,7 @@
       "title": "Presupuestos recientes",
       "date": "Fecha",
       "customer": "Proveedor",
-      "amount_due": "Monto adeudado",
+      "amount_due": "Cantidad adeudada",
       "actions": "Comportamiento",
       "view_all": "Ver todo"
     }
@@ -123,7 +123,7 @@
     "display_name": "Nombre para mostrar",
     "primary_contact_name": "Nombre de contacto primario",
     "contact_name": "Nombre de contacto",
-    "amount_due": "Monto adeudado",
+    "amount_due": "Cantidad adeudada",
     "email": "Email",
     "address": "Habla a",
     "phone": "Teléfono",
@@ -209,7 +209,7 @@
     "partially_paid": "Parcialmente pagado",
     "total": "Total",
     "discount": "Descuento",
-    "sub_total": "Subtotal",
+    "sub_total": "Base imponible",
     "estimate_number": "Numero Presupuesto",
     "ref_number": "Número de referencia",
     "contact": "Contacto",
@@ -224,7 +224,7 @@
     "notes": "Notas",
     "select_a_type": "Selecciona un tipo",
     "type": "Tipo",
-    "quantity": "Monto",
+    "quantity": "Cantidad",
     "name": "Nombre",
     "code": "Código",
     "tax": "Impuesto",
@@ -247,7 +247,7 @@
       "required": "Se requiere campo"
     },
     "accepted": "Aceptado",
-    "sent": "Expedido",
+    "sent": "Aprobado",
     "draft": "Borrador",
     "declined": "Rechazado",
     "new_estimate": "Nuevo presupuesto",
@@ -271,7 +271,7 @@
     "item": {
       "title": "Título del servicio",
       "description": "Descripción",
-      "quantity": "Quantity",
+      "quantity": "Cantidad",
       "price": "Precio",
       "discount": "Descuento",
       "total": "Total",
@@ -354,7 +354,7 @@
     "updated_message": "Factura actualizada exitosamente",
     "deleted_message": "Factura eliminada con éxito | Facturas borradas exitosamente",
     "marked_as_sent_message": "Factura marcada como enviada con éxito",
-    "invalid_due_amount_message": "El pago ingresado es mayor que el monto total adeudado por esta factura. Por favor verifique y vuelva a intentar"
+    "invalid_due_amount_message": "El pago ingresado es mayor que la cantidad total adeudada por esta factura. Por favor verifique y vuelva a intentar"
   },
   "credit_notes": {
     "title": "Notas de credito",
@@ -536,7 +536,7 @@
       "notifications": "Notificaciones",
       "tax_types": "Tipos de impuestos",
       "expense_category": "Categorías de gastos",
-      "update_app": "Actualizar aplicación"
+      "update_app": "Versión de aplicación"
     },
     "title": "Configuraciones",
     "setting": "Configuraciones | Configuraciones",
@@ -679,8 +679,8 @@
       "select_financial_year": "seleccione año financiero"
     },
     "update_app": {
-      "title": "Actualizar aplicación",
-      "description": "actualizar la descripción de la aplicación",
+      "title": "Versión de la aplicación",
+      "description": "Información de la versión actual de la aplicación",
       "check_update": "Buscar actualizaciones",
       "avail_update": "Nueva actualización disponible",
       "next_version": "Próxima versión",
@@ -779,10 +779,10 @@
   "layout_login": {
     "copyright_crater": "Copyright @ PFS Tech - 2019",
     "super_simple_invoicing": "Plataforma de Gestión",
-    "for_freelancer": "de Gastos, Facturas",
+    "for_freelancer": "de Compras",
     "small_businesses": " y Presupuestos",
-    "crater_help": "Registra gastos, presupuestos y facturas de manera sencilla y agradable",
-    "invoices_and_estimates": "facturas y presupuestos con capacidad para elegir múltiples plantillas."
+    "crater_help": "Registra compras y administra los presupuestos de manera sencilla y rápida",
+    "invoices_and_estimates": ""
 
   },
   "validation": {
@@ -802,7 +802,7 @@
     "qty_must_greater_than_zero": "La cantidad debe ser mayor que cero.",
     "price_greater_than_zero": "El precio debe ser mayor que cero.",
     "payment_greater_than_zero": "El pago debe ser mayor que cero.",
-    "payment_greater_than_due_amount": "El pago ingresado es mayor al monto adeudado de esta factura.",
+    "payment_greater_than_due_amount": "El pago ingresado es mayor a la cantidad adeudado de esta factura.",
     "quantity_maxlength": "La cantidad no debe ser mayor de 20 dígitos.",
     "price_maxlength": "El precio no debe ser mayor de 20 dígitos.",
     "price_minvalue": "El precio debe ser mayor que 0 dígitos",
@@ -813,5 +813,96 @@
     "notes_maxlength": "Las notas no deben tener más de 255 caracteres.",
     "address_maxlength": "La dirección no debe tener más de 255 caracteres.",
     "ref_number_maxlength": "El número de referencia no debe tener más de 255 caracteres."
+  },
+  "budgets": {
+    "title": "Presupuestos",
+    "estimate": "Presupuesto | Presupuestos",
+    "estimates_list": "Lista de presupuestos",
+    "days": "{días} días",
+    "months": "{meses} Mes",
+    "years": "{años} Año",
+    "all": "Todas",
+    "paid": "Pagada",
+    "unpaid": "No pagado",
+    "customer": "CLIENTE",
+    "ref_no": "NÚMERO DE REFERENCIA.",
+    "number": "NÚMERO",
+    "amount_due": "CANTIDAD DEBIDA",
+    "partially_paid": "Parcialmente pagado",
+    "total": "Total",
+    "discount": "Descuento",
+    "sub_total": "Subtotal",
+    "estimate_number": "Numero Presupuesto",
+    "ref_number": "Número de referencia",
+    "contact": "Contacto",
+    "add_item": "Agregar un servicio",
+    "date": "Fecha",
+    "due_date": "Fecha de vencimiento",
+    "expiry_date": "Fecha de caducidad",
+    "status": "Estado",
+    "add_tax": "Agregar impuesto",
+    "amount": "Cantidad",
+    "action": "Acción",
+    "notes": "Notas",
+    "select_a_type": "Selecciona un tipo",
+    "type": "Tipo",
+    "quantity": "Cantidad",
+    "name": "Nombre",
+    "code": "Código",
+    "tax": "Impuesto",
+    "send_estimate": "Enviar presupuesto",
+    "estimate_template": "Plantilla de presupuesto",
+    "convert_to_invoice": "Convertir a factura",
+    "mark_as_sent": "Marcar como enviado",
+    "record_payment": "Registro de pago",
+    "add_estimate": "Agregar presupuesto",
+    "save_estimate": "Guardar presupuesto",
+    "confirm_conversion": "¿Quiere convertir esta presupuesto en factura?",
+    "conversion_message": "Conversión exitosa",
+    "confirm_send_estimate": "Este presupuesto se enviará para aprobación",
+    "confirm_mark_as_sent": "Este presupuesto se marcará como enviado",
+    "confirm_mark_as_accepted": "Este presupuesto se marcará como Aceptado",
+    "confirm_mark_as_rejected": "Este presupuesto se marcará como Rechazado",
+    "mark_as_sent_successfully": "Presupuesto marcada como enviada correctamente",
+    "send_estimate_successfully": "Presupuesto enviada con éxito",
+    "errors": {
+      "required": "Se requiere campo"
+    },
+    "accepted": "Aceptado",
+    "sent": "Expedido",
+    "draft": "Borrador",
+    "declined": "Rechazado",
+    "new_estimate": "Nuevo presupuesto",
+    "add_new_estimate": "Añadir nuevo presupuesto",
+    "update_Estimate": "Actualizar presupuesto",
+    "edit_estimate": "Editar presupuesto",
+    "items": "servicios",
+    "Estimate": "Presupuesto | Estimados",
+    "add_new_tax": "Agregar nuevo impuesto",
+    "no_estimates": "¡Aún no hay presupuestos!",
+    "list_of_estimates": "Esta sección contendrá la lista de presupuestos.",
+    "mark_as_rejected": "Marcar como rechazado",
+    "mark_as_accepted": "Marcar como aceptado",
+
+    "marked_as_accepted_message": "Presupuesto marcado como aceptada",
+    "marked_as_rejected_message": "Presupuesto marcado como rechazada",
+    "confirm_delete": "No podrá recuperar este presupuesto | No podrá recuperar estos presupuestos",
+    "created_message": "Presupuesto creado con éxito",
+    "updated_message": "Presupuesto actualizado con éxito",
+    "deleted_message": "Presupuesto eliminado con éxito | Presupuestos eliminados exitosamente",
+    "item": {
+      "title": "Título del servicio",
+      "description": "Descripción",
+      "quantity": "Quantity",
+      "price": "Precio",
+      "discount": "Descuento",
+      "total": "Total",
+      "total_discount": "Descuento total",
+      "sub_total": "Subtotal",
+      "tax": "Impuesto",
+      "amount": "Cantidad",
+      "select_an_item": "Escriba o haga clic para seleccionar un elemento",
+      "type_item_description": "Tipo Elemento Descripción (opcional)"
+    }
   }
 }

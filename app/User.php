@@ -165,7 +165,7 @@ class User extends \TCG\Voyager\Models\User implements HasMedia
 
     public function scopeCustomer($query)
     {
-        return $query->where('role_name', 'customer');
+        return $query->where('role_name', 'provider');
     }
 
     public function scopeApplyFilters($query, array $filters)

@@ -375,6 +375,43 @@ Route::group(['middleware' => 'api'], function () {
 
         });
 
+
+         // Budgets
+        //-------------------------------------------------
+
+        Route::post('/budgets/delete', [
+            'as' => 'budgets.delete',
+            'uses' => 'BudgetsController@delete'
+        ]);
+
+        Route::post('/budgets/send', [
+            'as' => 'budgets.send',
+            'uses' => 'BudgetsController@sendEstimate'
+        ]);
+
+        Route::post('/budgets/mark-as-sent', [
+            'as' => 'budgets.send',
+            'uses' => 'BudgetsController@markEstimateSent'
+        ]);
+
+        Route::post('/budgets/accept', [
+            'as' => 'budgets.mark.accepted',
+            'uses' => 'BudgetsController@markEstimateAccepted'
+        ]);
+
+        Route::post('/budgets/reject', [
+            'as' => 'budgets.mark.rejected',
+            'uses' => 'BudgetsController@markEstimateRejected'
+        ]);
+
+        Route::post('/budgets/{id}/convert-to-invoice', [
+            'as' => 'estimate.to.invoice',
+            'uses' => 'BudgetsController@estimateToInvoice'
+        ]);
+
+        Route::resource('budgets', 'BudgetsController');
+
+
     });
 
 });

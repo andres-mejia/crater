@@ -90,7 +90,7 @@ global.axios.interceptors.response.use(undefined, function (err) {
   return new Promise((resolve, reject) => {
     console.log(err.response)
     if (err.response.data.error === 'invalid_credentials') {
-      window.toastr['error']('Invalid Credentials')
+      window.toastr['error']('Credenciales inválidas')
     }
     if (err.response.data && (err.response.statusText === 'Unauthorized' || err.response.data === ' Unauthorized.')) {
       store.dispatch('auth/logout', true)

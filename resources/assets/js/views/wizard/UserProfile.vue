@@ -172,7 +172,7 @@ export default {
       this.fileObject = file
     },
     handleUploadError (message, type, xhr) {
-      window.toastr['error']('Oops! Something went wrong...')
+      window.toastr['error']('Oops! Algo ha salido mal...')
     },
     async next () {
       this.$v.profileData.$touch()

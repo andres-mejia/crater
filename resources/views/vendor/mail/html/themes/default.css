@@ -184,7 +184,7 @@ img {
 
 .footer-link {
     text-decoration: none;
-    color: #5851D8;
+    color: #d7a461;
 }
 /* Tables */
 
@@ -237,11 +237,11 @@ img {
 
 .button-blue,
 .button-primary {
-    background-color: #5851D8;
-    border-top: 10px solid #5851D8;
-    border-right: 18px solid #5851D8;
-    border-bottom: 10px solid #5851D8;
-    border-left: 18px solid #5851D8;
+    background-color: #d7a461;
+    border-top: 10px solid #d7a461;
+    border-right: 18px solid #d7a461;
+    border-bottom: 10px solid #d7a461;
+    border-left: 18px solid #d7a461;
 }
 
 .button-green,

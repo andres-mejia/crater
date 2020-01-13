@@ -9,7 +9,7 @@ use Faker\Generator as Faker;
 $factory->define(Payment::class, function (Faker $faker) {
     return [
         'user_id' => function () {
-            return factory(User::class)->create(['role_name' => 'customer'])->id;
+            return factory(User::class)->create(['role_name' => 'provider'])->id;
         },
         'payment_date' => $faker->date($format = 'd/m/Y', $max = 'now'),
         'company_id' => User::find(1)->company_id,

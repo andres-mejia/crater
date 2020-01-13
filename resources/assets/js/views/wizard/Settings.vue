@@ -206,7 +206,7 @@ export default {
         this.loading = false
         Ls.set('auth.token', response.data.token)
         this.loginOnBoardingUser(response.data.token)
-        window.toastr['success']('Login Successful')
+        //window.toastr['success']('Bienvenido!')
         this.$router.push('/admin/dashboard')
       }
     }

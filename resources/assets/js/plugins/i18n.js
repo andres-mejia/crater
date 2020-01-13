@@ -7,7 +7,7 @@ import es from './es.json'
 Vue.use(VueI18n)
 
 const i18n = new VueI18n({
-  locale: 'en',
+  locale: 'es',
   messages: {
     en,
     fr,

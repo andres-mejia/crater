@@ -3,8 +3,9 @@
     <div class="text-right">
       {{ $t('general.powered_by') }}
       <a
-        href="http://bytefury.com/"
-        target="_blank">{{ $t('general.bytefury') }}
+        href="https://www.pfstech.es/"
+        target="_blank">
+        <img src="/assets/img/logo-pfstech.png" alt="PFS TECH" class="logo-footer" />
       </a>
     </div>
   </footer>

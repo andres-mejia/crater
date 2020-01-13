@@ -5,8 +5,8 @@ const settings = {
   headerClass: '',
   cellClass: '',
   filterInputClass: '',
-  filterPlaceholder: 'Filter table…',
-  filterNoResults: 'There are no matching rows'
+  filterPlaceholder: 'Filtrar tabla…',
+  filterNoResults: 'No se han encontrado registros coincidentes'
 }
 
 export function mergeSettings (newSettings) {

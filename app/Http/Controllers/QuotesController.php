@@ -59,7 +59,7 @@ class EstimatesController extends Controller
         $nextEstimateNumber = 'EST-'.Estimate::getNextEstimateNumber();
         $tax_per_item = CompanySetting::getSetting('tax_per_item', $request->header('company'));
         $discount_per_item = CompanySetting::getSetting('discount_per_item', $request->header('company'));
-        $customers = User::where('role_name', 'customer')->get();
+        $customers = User::where('role_name', 'provider')->get();
 
         return response()->json([
             'customers' => $customers,
@@ -212,7 +212,7 @@ class EstimatesController extends Controller
             'taxes',
             'taxes.taxType'
         ])->find($id);
-        $customers = User::where('role_name', 'customer')->get();
+        $customers = User::where('role_name', 'provider')->get();
 
         return response()->json( [
             'customers' => $customers,
@@ -400,7 +400,7 @@ class EstimatesController extends Controller
         $invoice = Invoice::create([
             'invoice_date' => $invoice_date,
             'due_date' => $due_date,
-            'invoice_number' => "INV-".Invoice::getNextInvoiceNumber(),
+            'invoice_number' => '' /*"INV-".Invoice::getNextInvoiceNumber()*/,
             'reference_number' => $estimate->reference_number,
             'user_id' => $estimate->user_id,
             'company_id' => $request->header('company'),
